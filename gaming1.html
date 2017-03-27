@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>forest adventure</title>
+</head>
+<body>
+<p id = "output"> </p>
+<input type="input" name="text" placeholder = " Enter you're action">
+<button> enter</button>
+
+<script>
+	
+
+
+
+
+
+
+
+
+
+
+
+var actionsIknow = ["north", "east", "south", "west"];
+
+var imgs =[];
+map[0]= "An old stone keep";
+map[1]= "A deep well";
+map[2]= "a sunny glade";
+map[3]= "A sleeping dragon ";
+map[4]= "a narrow pathwat";
+map[5]= "An acient gate";	
+map[6]= "the edg of a river";
+map[7]= "a lonely wooden bench  ";
+map[8]= "an isolated cotage. faing music comes form inside ";
+
+	var actionsIknow = ["north","east","south", "west"]
+var blockedPathMessages = [];
+blockedPathMessages[0] = " It's way too dangerous to move that way";
+blockedPathMessages[1] = " A mysterious force holds you back!";
+blockedPathMessages[2] = " A tangle of thorns blocks your way!";
+blockedPathMessages[3] = "You can't step over a dragon thorn";
+blockedPathMessages[4] = "";
+blockedPathMessages[5] = "";
+blockedPathMessages[6] = "";
+blockedPathMessages[7] = "";
+blockedPathMessages[8] = "";
+
+var items = ["flute", "stone", "sword"];
+var itemsLocation 
+
+
+	//default starting location
+	var maplocation = 4;
+	var playerInput = "";
+	var gameMessage = "";
+	var action = "";
+
+	var maplocation = 4;
+	var output = document.querySelector("#output");
+	output.innerHTML = map[maplocation]
+
+	var input = document.querySelector("#input")
+	var button =  document.querySelector("button")
+	button.style.cursor = "pointer";
+	button.addEventListener(;click;, clickHandler, false);
+
+	
+	
+	//function for Game
+	render();
+
+	function clickHandler(){
+playGame();
+
+	}
+function playGame(){
+	playerInput = input.value;
+	playerInput = playerInput.toLowerCase();
+	gameMessage = "";
+	action = "";
+
+	for(i = 0; i<actionsIknow.length; i++){
+			if (playerInput.indexOf(actionsIknow[i] !== -1])){
+				action = playerInput;
+				console.log("player's action:"+ action);
+				break;
+
+
+	
+
+		switch(action)
+		}
+	}
+	switch(action){
+		case "north":
+		mapLocation -=3;
+		break;
+
+		case "east":
+			if(mapLocation % 3 !=2){
+				mapLocation += 1;
+		}else{
+				gameMessage= blockedPathMessages[
+					mapLocation];
+		}			
+		break;
+
+		 case "south":
+		mapLocation += 3;
+		break;
+
+		case "west":
+		mapLocation -= 1;
+
+
+
+
+
+
+
+
+		break;
+
+		case "take":
+			takeItem()
+			break
+
+		default:
+		gameMessage ="I do not know that!"
+
+	}
+
+	render();
+}
+
+function render(){
+
+	// renders image
+		output.innerHTML = map [maplocation];
+		image.src = imgs[mapLocation];
+
+		//Display Game Message
+		output.innerHTML += "<br> <em>" + gameMessage + "</em>"
+}
+
+
+
+	// renders image
+	output.innerHTML = map[mapLocation]
+	image.src = imgs[mapLocation];
+
+	for(var i =0; i<items.length; i++){
+		if(mapLocation === itemsLocation[i] ){
+			output.innerHTML += "<br>"
+
+
+
+	if(backpack.length !== 0){
+
+		output.innerHTML += "<br> you are carrying: "+
+			backpack.join(",");
+	}
+
+}
+
+	
+
+
+
+function takeItems(){
+	var itemIndex
+	if(itemIndexNumber !== -1 && itemsLocation[
+		itemIndex)
+
+
+
+
+
+
+
+
+
+
+
+
+if(backpack.length !==)
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
